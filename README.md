@@ -4,10 +4,10 @@ Utilize Ploly-chart, JavaScript and HTML to deploy visualized data.
 ## Overview of the Project
 Using JavaScript, HTML, D3.js, Plotly.js, and CSS style sheet to visualize JSON file data to Bar Chart, Gauge Chart and Bubble Chart along with customizing HTML file taking below steps:
 
-Deliverable 1: Create a Horizontal Bar Chart
-Deliverable 2: Create a Bubble Chart
-Deliverable 3: Create a Gauge Chart
-Deliverable 4: Customize the Dashboard
+- Deliverable 1: Create a Horizontal Bar Chart
+- Deliverable 2: Create a Bubble Chart
+- Deliverable 3: Create a Gauge Chart
+- Deliverable 4: Customize the Dashboard
 
 ## Resources
 - Data Source: samples.json
@@ -19,11 +19,11 @@ Deliverable 4: Customize the Dashboard
   
   1. The 
   
-      ![](static/images/deliverable_output1.png)
+      ![](static/images/deliverable1_output.png)
      
   - Total 
   
-      ![](static/images/deliverable_output2.png)
+      ![](static/images/deliverable2_output.png)
   
   - While, 
   
