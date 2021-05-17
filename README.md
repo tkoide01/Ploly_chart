@@ -180,5 +180,6 @@ Using JavaScript, HTML, D3.js, Plotly.js, and CSS style sheet to visualize JSON 
           <div style="background-color:#A0B7E2" id="sample-metadata" class="panel-body" ></div>
   ```
   After these changes, the output image is as below.
+  
    ![](static/images/deliverable4_output.png)  
 
