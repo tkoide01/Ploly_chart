@@ -17,11 +17,52 @@ Using JavaScript, HTML, D3.js, Plotly.js, and CSS style sheet to visualize JSON 
 ## Results
   Based on the two technical analysis, we can infer below information.
   
-  1. The 
+  1. Deliverable 1: Create a Horizontal Bar Chart
+  ```
+  function buildCharts(sample) {
+  // 2. Use d3.json to load and retrieve the samples.json file 
+  d3.json("static/data/samples.json").then((data) => {
+    // 3. Create a variable that holds the samples array. 
+    var samplesData = data.samples;
+    // 4. Create a variable that filters the samples for the object with the desired sample number.
+    var filteredData = samplesData.filter(sampleObj => sampleObj.id == sample);
+    //  5. Create a variable that holds the first sample in the array.
+    var firstSample = filteredData[0];
+
+    // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
+    var ids  = firstSample.otu_ids;
+    var labels = firstSample.otu_labels.slice(0,10).reverse();
+    var values = firstSample.sample_values.slice(0,10).reverse();
+
+    var bubbleLabels = firstSample.otu_labels;
+    var bubbleValues = firstSample.sample_values;
+    // 7. Create the yticks for the bar chart.
+    // Hint: Get the the top 10 otu_ids and map them in descending order  
+    //  so the otu_ids with the most bacteria are last. 
+
+    var yticks = ids.map(sampleObj => "OTU " + sampleObj).slice(0,10).reverse();
+    console.log(yticks);
+
+    // 8. Create the trace for the bar chart. 
+    var trace = [{
+        x: values,
+        y: yticks,
+        type: "bar",
+        orientation: "h",
+        text: labels
+    }];
+    // 9. Create the layout for the bar chart. 
+    var barLayout = {
+     title: "Top 10 Bacteria Cultures Found"
+    };
+    // 10. Use Plotly to plot the data with the layout. 
+    Plotly.newPlot("bar", trace, barLayout);
   
-      ![](static/images/deliverable1_output.png)
+  ```
+  
+   ![](static/images/deliverable1_output.png)
      
-  - Total 
+  2.  Total 
   
       ![](static/images/deliverable2_output.png)
   
